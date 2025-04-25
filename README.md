@@ -1,5 +1,13 @@
 # 📘 Documentación de Modelos: Clínica de Salud Mental
 
+
+
+## 📡 Backend API - Django + Django REST Framework
+
+Este proyecto utiliza **Django** como backend, y expone una API RESTful construida con **Django REST Framework (DRF)**. Esta API es consumida por un frontend desarrollado en **ReactJS** de forma separada.
+
+
+
 Este proyecto contiene los modelos principales para gestionar pacientes, profesionales y consultas en una clínica de salud mental.
 
 ---
