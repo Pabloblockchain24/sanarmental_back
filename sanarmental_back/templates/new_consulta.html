@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Confirmación de Consulta | SanarMental</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 15px; margin: 0;">
+  <div style="width: 90%; max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    
+    <h2 style="color: #2c3e50; text-align: center;">¡Tu cita ha sido agendada exitosamente!</h2>
+
+    <p style="text-align: center; font-size: 16px; color: #555;">Hola {{ paciente_nombre }}, aquí tienes los detalles de tu próxima consulta:</p>
+
+    <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+
+    <p style="font-size: 14px; color: #333;"><strong>Paciente:</strong> {{ paciente_nombre }}</p>
+    <p style="font-size: 14px; color: #333;"><strong>Profesional:</strong> {{ profesional_nombre }}</p>
+    <p style="font-size: 14px; color: #333;"><strong>Fecha:</strong> {{ fecha }}</p>
+    <p style="font-size: 14px; color: #333;"><strong>Hora:</strong> {{ hora }}</p>
+    <p style="font-size: 14px; color: #333;"><strong>Estado:</strong> {{ estado }}</p>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="https://www.sanarmental.cl/intranet/pacientes/{{ paciente_rut }}" 
+         style="display: inline-block; background-color: #3498db; color: #ffffff; 
+                padding: 14px 24px; font-size: 16px; text-decoration: none; 
+                border-radius: 5px; font-weight: bold;">
+        Ir a mi Sanarmetntal
+      </a>
+    </div>
+
+    <p style="font-size: 12px; color: #7f8c8d; text-align: center;">
+      Por favor, recuerda confirmar tu cita 24 horas antes.  Si no puedes asistir, recuerda cancelar o reprogramar tu cita desde tu portal de paciente.
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 30px 0;">
+
+    <!-- Contacto -->
+    <div style="text-align: center; font-size: 12px; color: #95a5a6;">
+        <p><strong>¿Dudas o consultas?</strong> Escríbenos directamente a nuestro WhatsApp:</p>
+        <p>
+          <a href="https://wa.me/56950727028" 
+             style="color: #25D366; font-weight: bold; text-decoration: none;">
+            +56 9 5072 7028
+          </a>
+        </p>
+        <p>Horario de atención: Lunes a Viernes, 9:00 a 18:00 hrs</p>
+      </div>
+
+    <p style="text-align: center; font-size: 12px; color: #bdc3c7; margin-top: 30px;">
+      Este es un correo automático, por favor no respondas a este mensaje.
+    </p>
+
+  </div>
+</body>
+</html>

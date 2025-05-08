@@ -8,8 +8,7 @@ class Paciente(models.Model):
         on_delete=models.CASCADE,
         related_name='paciente',
         limit_choices_to={
-            'role': CustomUser.Role.PACIENTE,
-            
+            'role': CustomUser.Role.PACIENTE
         },
     )
 
@@ -24,3 +23,7 @@ class Paciente(models.Model):
   
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
+    def save(self, *args, **kwargs):
+        self.user.asignado = True
+        self.user.save()
+        super().save(*args, **kwargs)

@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,7 +18,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'rest_framework',
-    'api',
     'usuarios',
     'pacientes',
     'consultas',
@@ -36,10 +36,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'sanarmental_back.urls'
 
+TEMPLATES_DIR = BASE_DIR / 'sanarmental_back' / 'templates'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,3 +101,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# Configuración correo
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sanarmental@gmail.com'
+EMAIL_HOST_PASSWORD = 'hmhf abba hhqb estf'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Clínica Sanarmental <sanarmental@gmail.com>'
